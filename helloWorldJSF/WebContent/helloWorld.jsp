@@ -13,6 +13,7 @@
 Hello!
 
 <f:view>
+<f:loadBundle basename="resources.hello" var="msg" />
 <h:outputLabel value="#{helloBean.greetingMessage}"></h:outputLabel>
 <h:form>
 <h:panelGrid columns="2">
@@ -21,7 +22,7 @@ Hello!
   <f:validator validatorId="helloValidator" />
 </h:inputText>
 
-<h:commandButton action="#{helloBean.confirm}" value="Change greeting message"></h:commandButton>
+<h:commandButton action="#{helloBean.confirm}" value="#{msg.confirmBtnCaption}"></h:commandButton>
 
 <h:messages layout="table"></h:messages>
 
