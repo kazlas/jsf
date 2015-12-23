@@ -14,6 +14,12 @@ Hello!
 
 <f:view>
 <h:outputLabel value="#{helloBean.greetingMessage}"></h:outputLabel>
+<h:form>
+<br/>
+<h:inputText value="#{helloBean.greetingMessage}"></h:inputText>
+<br/>
+<h:commandButton action="#{helloBean.confirm}" value="Change greeting message"></h:commandButton>
+</h:form>
 </f:view>
 
 </body>

@@ -12,5 +12,9 @@ public class HelloBean {
 		this.greetingMessage = greetingMessage;
 	}
 	
+	public void confirm(){
+		
+	}
+	
 	
 }
