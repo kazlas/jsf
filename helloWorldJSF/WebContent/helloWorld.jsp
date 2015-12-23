@@ -13,7 +13,7 @@
 Hello!
 
 <f:view>
-<h:outputLabel value="Hello from JSF!"></h:outputLabel>
+<h:outputLabel value="#{helloBean.greetingMessage}"></h:outputLabel>
 </f:view>
 
 </body>
