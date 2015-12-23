@@ -9,5 +9,9 @@
 		<managed-bean-class>helloWorldJSF.HelloBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<validator>
+		<validator-id>helloValidator</validator-id>
+		<validator-class>helloWorldJSF.HelloValidator</validator-class>
+	</validator>
 
 </faces-config>

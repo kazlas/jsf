@@ -16,9 +16,12 @@ Hello!
 <h:outputLabel value="#{helloBean.greetingMessage}"></h:outputLabel>
 <h:form>
 <br/>
-<h:inputText value="#{helloBean.greetingMessage}"></h:inputText>
+<h:inputText value="#{helloBean.greetingMessage}">
+  <f:validator validatorId="helloValidator" />
+</h:inputText>
 <br/>
 <h:commandButton action="#{helloBean.confirm}" value="Change greeting message"></h:commandButton>
+<h:messages layout="table"></h:messages>
 </h:form>
 </f:view>
 
