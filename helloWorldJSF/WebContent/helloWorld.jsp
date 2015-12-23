@@ -15,13 +15,17 @@ Hello!
 <f:view>
 <h:outputLabel value="#{helloBean.greetingMessage}"></h:outputLabel>
 <h:form>
-<br/>
+<h:panelGrid columns="2">
+
 <h:inputText value="#{helloBean.greetingMessage}">
   <f:validator validatorId="helloValidator" />
 </h:inputText>
-<br/>
+
 <h:commandButton action="#{helloBean.confirm}" value="Change greeting message"></h:commandButton>
+
 <h:messages layout="table"></h:messages>
+
+</h:panelGrid>
 </h:form>
 </f:view>
 
