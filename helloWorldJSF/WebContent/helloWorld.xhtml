@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+<title>Hello World</title>
+</head>
+<body>
+
+Hello!
+
+<f:view>
+<f:loadBundle basename="resources.hello" var="msg" />
+<h:outputLabel value="#{helloBean.greetingMessage}"></h:outputLabel>
+<h:form>
+<h:panelGrid columns="2">
+
+<h:inputText value="#{helloBean.greetingMessage}">
+</h:inputText>
+
+<h:commandButton action="#{helloBean.confirm}" value="#{msg.confirmBtnCaption}">
+  <f:ajax />
+
+</h:commandButton>
+
+<h:messages layout="table"></h:messages>
+
+</h:panelGrid>
+</h:form>
+</f:view>
+
+</body>
+</html>
