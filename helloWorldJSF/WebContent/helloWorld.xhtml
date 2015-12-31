@@ -19,10 +19,11 @@ Hello!
 <h:panelGrid columns="2">
 
 <h:inputText value="#{helloBean.greetingMessage}">
-  <f:ajax event="keyup" render="output"/>
+  <f:validator validatorId="helloValidator" />
+  <f:ajax event="keyup" render="output messages"/>
 </h:inputText>
 
-<h:messages layout="table"></h:messages>
+<h:messages id="messages" layout="table"></h:messages>
 
 </h:panelGrid>
 </h:form>
