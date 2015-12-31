@@ -13,18 +13,14 @@
 Hello!
 
 <f:view>
-<f:loadBundle basename="resources.hello" var="msg" />
-<h:outputLabel value="#{helloBean.greetingMessage}"></h:outputLabel>
 <h:form>
+<f:loadBundle basename="resources.hello" var="msg" />
+<h:outputLabel id="output" value="#{helloBean.greetingMessage}"></h:outputLabel>
 <h:panelGrid columns="2">
 
 <h:inputText value="#{helloBean.greetingMessage}">
+  <f:ajax event="keyup" render="output"/>
 </h:inputText>
-
-<h:commandButton value="#{msg.confirmBtnCaption}">
-  <f:ajax />
-
-</h:commandButton>
 
 <h:messages layout="table"></h:messages>
 
